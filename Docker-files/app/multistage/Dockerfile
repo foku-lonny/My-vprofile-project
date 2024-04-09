@@ -1,6 +1,6 @@
 FROM openjdk:11-jdk-slim AS BUILD_IMAGE
 RUN apt update && apt install maven -y
-RUN git clone https://github.com/devopshydclub/vprofile-project.git
+RUN git clone https://github.com/foku-lonny/My-vprofile-project.git
 RUN cd My-vprofile-project && git checkout docker && mvn install
 
 FROM tomcat:9-jre11
