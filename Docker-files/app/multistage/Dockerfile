@@ -1,5 +1,7 @@
 FROM openjdk:17 AS BUILD_IMAGE
-RUN apt update && apt install maven -y
+
+RUN apk update && apk add maven git
+
 RUN git clone https://github.com/foku-lonny/My-vprofile-project.git
 RUN cd My-vprofile-project && git checkout docker && mvn install
 
